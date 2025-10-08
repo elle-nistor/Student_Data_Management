@@ -1,0 +1,43 @@
+@startuml
+class Elev {
+    - nrOrdine: int
+    - absenteMotivate: int
+    - absenteNemotivate: int
+    - nume: String
+    - prenume: String
+    - purtare: String
+    - gen: String
+    - notaRomana: double
+    - notaMatematica: double
+    - notaFizica: double
+    - notaChimie: double
+    - notaEngleza: double
+    - notaEdFizica: double
+    - notaEdCivica: double
+    - notaInformatica: double
+    + Elev(int, String, String, String, double, double, double, double, double, double, double, double, int, int, String)
+    + toString(): String
+}
+
+class Test {
+    - Lista: Elev[]
+    - FILENAME: String
+    - cnt: int
+    + incarcaEleviDinFisier(): void
+    + adaugaElev(Scanner): void
+    + afisare(): void
+    + CelMaiDesteptElev(): void
+    + CeleMaiPutineAbsente(): void
+    + MediaGrupei(): void
+    + CeaMaiMicaNotaEnglezaF(): void
+    + alfabet(): void
+    + ElevExemplar(): void
+    + bubleSort(): void
+    + afisareTop5(): void
+    + inserareFisier(): void
+    + main(String[]): void
+}
+
+Elev "1" --* "1" Test
+
+@enduml
